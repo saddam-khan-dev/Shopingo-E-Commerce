@@ -1,0 +1,180 @@
+/* Medium devices (tablet) */
+@media (max-width: 1024px) {
+  /* Adjust nav */
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-link ul {
+    gap: 10px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .image-box {
+    width: 40%;
+  }
+
+  /* Carousel slides */
+  .slide {
+    width: 50%;
+  }
+
+  /* Featured carousel cards */
+  .product-card {
+    flex: 0 0 calc(25% - 15px);
+  }
+
+  /* Product grid */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Brands grid */
+  .brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Small devices (mobile) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-link ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link li {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .content {
+    width: 80%;
+    padding-left: 5%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .image-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: auto;
+    margin-top: 20px;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  /* Product cards */
+  .product-card {
+    flex: 0 0 calc(50% - 15px);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Top categories */
+  .category-track {
+    width: 200%;
+  }
+
+  /* Brands grid */
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Blog cards */
+  .blog-container {
+    flex-direction: column;
+  }
+
+  /* Newsletter form */
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btt-wrapper {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .fixed-top-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small devices (very small mobile) */
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content h3 {
+    font-size: 1rem;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+  }
+
+  .btn,
+  .btn-dark,
+  .btn-outline,
+  .read-more-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .product-card {
+    flex: 0 0 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .category-card {
+    flex: 0 0 100%;
+  }
+
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trending-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .trending-image,
+  .trending-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .offers-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
