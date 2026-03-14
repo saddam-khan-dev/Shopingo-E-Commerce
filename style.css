@@ -58,8 +58,9 @@ nav {
   letter-spacing: 0.5px;
 }
 
+/* Light gray background of active nav-link */
 .nav-link li.active {
-  background-color: #f4f4f4; /* Light gray background of active nav-link */
+  background-color: #f4f4f4;
 }
 
 .nav-link li:hover {
@@ -221,7 +222,7 @@ input[type="radio"] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem; /* Scaled down arrows */
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   display: none;
@@ -320,14 +321,14 @@ input[name="feat-control"] {
 
 .card-track {
   display: flex;
-  gap: 15px; /* Gap between cards */
+  gap: 15px;
   transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1);
-  width: 160%; /* Allowing room for 8 cards (5 visible, 3 hidden) */
+  width: 160%;
 }
 
 /* --- PRODUCT CARD STYLE --- */
 .product-card {
-  flex: 0 0 calc(12.5% - 15px); /* Exactly 5 cards fill the 100% viewport */
+  flex: 0 0 calc(12.5% - 15px);
   background: #fff;
   border: 1px solid #f2f2f2;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
@@ -343,8 +344,12 @@ input[name="feat-control"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
+.img-container:hover img {
+  transform: scale(1.1);
+}
 /* --- HOVER OVERLAY (GREY BAR) --- */
 .hover-overlay {
   position: absolute;
@@ -444,46 +449,35 @@ input[name="feat-control"] {
 
 /* Back to Top Button */
 .btt-wrapper {
-  position: absolute;
-  top: 190vh; /* This hides the button while you are in the Hero section */
-  bottom: 0;
-  right: 30px; /* Margin from the right edge */
-  width: 50px;
-  pointer-events: none; /* Ensures the invisible container doesn't block clicks */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Button Styling */
 .fixed-top-btn {
-  position: sticky;
-  top: 180vh; /* Pushes the button to the BOTTOM of the viewport (85% down) */
-
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
-  background-color: #222121; /* Dark grey/black to match reference */
-  color: #ffffff;
+  background-color: #111; /* Dark background */
+  color: #fff; /* Icon color */
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
   text-decoration: none;
-  font-size: 22px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  pointer-events: auto; /* Re-enables clicking on the button itself */
-  transition:
-    background 0.3s,
-    transform 0.3s;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
+/* Hover Effect */
 .fixed-top-btn:hover {
   background-color: #444;
-  transform: translateY(-5px); /* Small lift effect */
-}
-
-/* Ensures the icon inside is centered */
-.fixed-top-btn i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transform: translateY(-3px);
 }
 
 /* Latest Section Start here  */
@@ -522,15 +516,15 @@ input[name="feat-control"] {
 }
 
 .tab.active {
-  background: #222529; /* Dark background for active */
+  background: #222529;
   color: white;
 }
 
 /* --- THE GRID --- */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 Columns */
-  gap: 30px; /* Space between cards */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
 /* --- CARD STYLING --- */
@@ -550,8 +544,12 @@ input[name="feat-control"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
+.p-img-box:hover img {
+  transform: scale(1.1);
+}
 /* "NEW SEASON" Label */
 .badge-new {
   position: absolute;
@@ -571,7 +569,7 @@ input[name="feat-control"] {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background: rgba(180, 180, 180, 0.6); /* Grey transparent bar */
+  background: rgba(180, 180, 180, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -613,6 +611,7 @@ input[name="feat-control"] {
   font-weight: 700;
   font-size: 18px;
 }
+
 /* What we offer section start here  */
 
 .offers-section {
@@ -639,13 +638,13 @@ input[name="feat-control"] {
   display: flex;
   justify-content: center;
   gap: 25px;
-  flex-wrap: wrap; /* Allows wrapping on small screens */
+  flex-wrap: wrap;
 }
 
 /* --- Base Card Styling --- */
 .offer-card {
   background: #fff;
-  flex: 1; /* Makes all cards equal width */
+  flex: 1;
   min-width: 250px;
   max-width: 320px;
   padding: 50px 30px;
@@ -659,7 +658,7 @@ input[name="feat-control"] {
 }
 
 .offer-card i {
-  font-size: 45px; /* Large icons */
+  font-size: 45px;
   margin-bottom: 25px;
   display: block;
 }
@@ -710,7 +709,9 @@ input[name="feat-control"] {
 .icon-yellow {
   color: #ffc107;
 }
+
 /* What we offer section start here  */
+
 .trending-section {
   padding: 40px 8%;
   background-color: #f8f9fa;
@@ -723,8 +724,8 @@ input[name="feat-control"] {
   display: flex;
   width: 100%;
   max-width: 1200px;
-  height: 400px; /* FIXED HEIGHT: Matches the proportions of the reference */
-  padding: 15px; /* Smaller white border frame */
+  height: 400px;
+  padding: 15px;
   border: 1px solid #eef0f2;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   align-items: stretch;
@@ -732,24 +733,24 @@ input[name="feat-control"] {
 
 /* --- Image Side --- */
 .trending-image {
-  flex: 1.2; /* Image is slightly wider than text side */
+  flex: 1.2;
   overflow: hidden;
 }
 
 .trending-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This makes sure the image doesn't stretch */
+  object-fit: cover;
   display: block;
 }
 
 /* --- Text Side --- */
 .trending-content {
   flex: 1;
-  padding: 0 0 0 40px; /* Space between image and text */
+  padding: 0 0 0 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers text vertically within the fixed height */
+  justify-content: center;
 }
 
 .trending-content h2 {
@@ -763,7 +764,7 @@ input[name="feat-control"] {
 .feature-text-list p {
   font-size: 15px;
   color: #666;
-  padding: 12px 0; /* Reduced from 18px */
+  padding: 12px 0;
   border-bottom: 1px solid #f0f0f0;
   line-height: 1.4;
 }
@@ -827,16 +828,15 @@ input[name="feat-control"] {
   margin-bottom: 50px;
 }
 
-/* --- The Grid (2 rows of 5) --- */
 .brands-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
-  gap: 20px; /* Space between the boxes */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 
 /* --- Individual Brand Box --- */
 .brand-box {
-  border: 1px solid #eee; /* Light grey border like the image */
+  border: 1px solid #eee;
   border-radius: 8px;
   padding: 30px 20px;
   display: flex;
@@ -857,21 +857,24 @@ input[name="feat-control"] {
 .brand-box img {
   max-width: 100%;
   height: auto;
-  max-height: 50px; /* Ensures all logos stay a similar size */
-  filter: grayscale(100%); /* Optional: makes them look uniform */
+  max-height: 50px;
+  filter: grayscale(100%);
   opacity: 0.8;
   transition: 0.3s;
+  transition: transform 0.6s ease;
 }
 
 .brand-box:hover img {
-  filter: grayscale(0%); /* Returns color on hover */
+  filter: grayscale(0%);
   opacity: 1;
+  transform: scale(1.1);
 }
+
 /* Top Category Section start here  */
+
 .category-card {
   flex: 1;
   background: #fff;
-  /* This creates the "box" look */
   border: 1px solid #ebebeb;
   padding: 15px;
   text-align: center;
@@ -890,7 +893,6 @@ input[name="feat-control"] {
   width: 100%;
   aspect-ratio: 1 / 1;
   margin-bottom: 20px;
-  /* CRITICAL for zoom effect: hides the expanding image edges */
   overflow: hidden;
   background-color: #f9f9f9;
 }
@@ -901,13 +903,11 @@ input[name="feat-control"] {
   height: 100%;
   object-fit: cover;
   display: block;
-  /* Smooth transition for the zoom */
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Zoom the image when the card is hovered */
 .category-card:hover .cat-img-box img {
-  transform: scale(1.15); /* Zooms in by 15% */
+  transform: scale(1.15);
 }
 
 /* --- INFO STYLING --- */
@@ -974,25 +974,27 @@ input[name="cat-slide"] {
 #set-2:checked ~ .category-carousel .next {
   display: none;
 }
+
 /* Newsletter Section start here  */
-/* --- Newsletter Section --- */
+
 .newsletter-section {
   width: 100%;
-  height: 300px; /* Adjust height as needed */
-  background-image: url("/Images/news-img.png"); /* Placeholder image of clothes */
+  height: 300px;
+  background-image: url("/Images/news-img.png");
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 /* Dark Overlay to make text readable */
+
 .newsletter-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1000,7 +1002,7 @@ input[name="cat-slide"] {
 
 .newsletter-content {
   width: 100%;
-  max-width: 650px; /* Limits the width of the form */
+  max-width: 650px;
   text-align: center;
   color: #fff;
   padding: 20px;
@@ -1017,7 +1019,7 @@ input[name="cat-slide"] {
 .newsletter-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Space between input and button */
+  gap: 15px;
 }
 
 .newsletter-form input {
@@ -1052,7 +1054,9 @@ input[name="cat-slide"] {
 .newsletter-form button:hover {
   background-color: #eeeeee;
 }
+
 /* Blog Start Here  */
+
 .blog-section {
   padding: 40px 8%;
   background-color: #fff;
@@ -1087,7 +1091,7 @@ input[name="cat-slide"] {
   max-width: 400px;
   background: #fff;
   border: 1px solid #f0f0f0;
-  text-align: left; /* Text is left-aligned in the cards */
+  text-align: left;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
   transition: 0.3s;
 }
@@ -1096,7 +1100,7 @@ input[name="cat-slide"] {
 .blog-img-box {
   width: 100%;
   height: 250px;
-  overflow: hidden; /* Clips the zoomed image */
+  overflow: hidden;
 }
 
 .blog-img-box img {
@@ -1107,7 +1111,7 @@ input[name="cat-slide"] {
 }
 
 .blog-card:hover .blog-img-box img {
-  transform: scale(1.1); /* Zoom Effect */
+  transform: scale(1.1);
 }
 
 /* --- Blog Body Content --- */
@@ -1158,9 +1162,11 @@ input[name="cat-slide"] {
   background-color: #333;
   color: #fff;
 }
+
 /* Footer Section Start here  */
+
 .main-footer {
-  background-color: #fcfcfc; /* Very light gray background */
+  background-color: #fcfcfc;
   padding: 40px 6% 10px;
   color: #555;
   border-top: 1px solid #eee;
@@ -1169,7 +1175,7 @@ input[name="cat-slide"] {
 /* --- TOP SECTION: 4 COLUMNS --- */
 .footer-top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr; /* Makes the first column wider */
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
   gap: 10px;
 }
 
@@ -1285,7 +1291,7 @@ input[name="cat-slide"] {
 }
 
 .app-btns img {
-  height: 55px; /* Adjust based on your image size */
+  height: 55px;
   cursor: pointer;
 }
 
@@ -1299,151 +1305,4 @@ input[name="cat-slide"] {
 .footer-bottom p {
   font-size: 15px;
   color: #666;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .product-track {
-    width: 300%;
-  }
-  .product-card {
-    flex: 0 0 calc(33.33% - 20px);
-  }
-}
-/* --- MOBILE --- */
-@media (max-width: 768px) {
-  .slide {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .content {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .content h1 {
-    font-size: 2.2rem;
-  }
-  .image-box {
-    position: relative;
-    width: 100%;
-    height: 35%;
-    right: 0;
-    justify-content: center;
-  }
-}
-@media (max-width: 1024px) {
-  .nav-link {
-    display: none;
-  } /* Hide menu on mobile */
-  nav {
-    padding: 0 20px;
-  }
-}
-@media (max-width: 1024px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  } /* 2 columns on tablet */
-}
-
-@media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  } /* 1 column on mobile */
-  .filter-tabs {
-    flex-wrap: wrap;
-  }
-}
-@media (max-width: 768px) {
-  .offer-card {
-    flex: 0 0 100%; /* Single column on mobile */
-    max-width: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .offers-container {
-    gap: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .trending-card {
-    height: auto; /* Allow it to grow on mobile */
-    flex-direction: column;
-  }
-  .trending-image {
-    height: 250px;
-  }
-  .trending-content {
-    padding: 30px 10px;
-  }
-}
-@media (max-width: 1024px) {
-  .brands-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
-  }
-}
-
-@media (max-width: 600px) {
-  .brands-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on phones */
-    gap: 15px;
-  }
-  .brands-header h2 {
-    font-size: 24px;
-  }
-}
-@media (max-width: 992px) {
-  .trending-card {
-    flex-direction: column; /* Stacks image on top of text */
-    padding: 15px;
-  }
-  .trending-content {
-    padding: 30px 10px;
-  }
-  .trending-content h2 {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1024px) {
-  .category-track {
-    width: 200%;
-  } /* 3 visible on tablet */
-}
-
-@media (max-width: 600px) {
-  .category-track {
-    width: 300%;
-  } /* 2 visible on mobile */
-  .cat-header h2 {
-    font-size: 24px;
-  }
-}
-@media (max-width: 768px) {
-  .newsletter-content h2 {
-    font-size: 26px;
-  }
-  .newsletter-section {
-    height: 350px;
-  }
-}
-@media (max-width: 768px) {
-  .blog-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .footer-top {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
-  .app-btns {
-    flex-direction: column;
-    align-items: center;
-  }
 }
